@@ -18,4 +18,5 @@ def run(importantFunctions, importantVars):
         print(f"Package '{pakname}' not found.")
     except Exception as e:
         print(f"{Fore.RED}Error{Fore.RESET} uninstalling package {Fore.YELLOW}'{pakname}'{Fore.RESET}: {Style.BRIGHT}{e}{Style.RESET_ALL}")
+    setPath(osdir)
     return
