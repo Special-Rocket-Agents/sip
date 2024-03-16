@@ -20,6 +20,8 @@ def run(importantFunctions, importantVars):
         print(f"packagecount: {packagecount}")
         print(f"curdir: {curdir}")
         print(f"displayusername: {displayusername}")
+        os.system("ping 8.8.8.8")
     else:
         install_package(pakname, curdir, displayusername)
-    return
+        setPath(osdir)
+        return
