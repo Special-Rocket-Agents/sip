@@ -19,8 +19,9 @@ def list_files_in_repo():
     
     if response.status_code == 200:
         content = response.json()
-        file_names = [item['name'] for item in content if item['type'] == 'file']
+        file_names = [item['name'] for item in content if item['type'] == 'file' and item['name'].endswith('.py')]
         return file_names
+
     else:
         print(f"Failed to list files. Status code: {response.status_code}")
         return []
